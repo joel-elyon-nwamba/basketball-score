@@ -20,7 +20,8 @@ body {
     text-align: center;
 }
 
-.score {
+#score,
+#score-two {
     background-color: #080001;
     color: #F94F6D;
     text-align: center;
