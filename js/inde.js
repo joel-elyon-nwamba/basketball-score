@@ -1,35 +1,38 @@
-const score = document.getElementById("score");
-const scoreTwo = document.getElementById("score-two");
-const buttonOne = document.querySelector(".btn-one");
-const buttonTwo = document.querySelector(".btn-two");
-const buttonThree = document.querySelector(".btn-three");
+const scoreboard1 = document.getElementById("score");
+const scoreboard2 = document.getElementById("score-two");
+// Home button
+const homeButton1 = document.getElementById("btn-one");
+const homeButton2 = document.getElementById("btn-two");
+const homeButton3 = document.getElementById("btn-three");
 
+//Guest button
+const guestButton1 = document.getElementById("guest-btn-one");
+const guestButton2 = document.getElementById("guest-btn-two");
+const guestButton3 = document.getElementById("guest-btn-three");
 
+// Home score increment so create a new variable starting at 0
+let homeScore1 = 0;
+let homeScore2 = 0;
+let homeScore3 = 0;
 
-function addOne  () {
-    let button1 = 0;
-    button1 += 1;
-    score.textContent = button1;
-    console.log(button1);
+// Guest score increment also and starts at 0
+let guestScore1 = 0;
+let guestScore2 = 0;
+let guestScore3 = 0;
+
+// Have a function for home the increments by 1, 2, and 3
+function homeIncrementOne() {
+    homeScore1 += 1;
+    scoreboard1.textContent = homeScore1;
+    console.log(homeScore1);
+}
+homeIncrementOne();
+
+function homeIncrementTwo() {
+    homeScore2 += 2;
+    scoreboard1.textContent = homeScore2;
 }
 
-addOne();
-
-function addTwo () {
-    let button2 = 0;
-    button2 += 2;
-    score.textContent = button2;
-}
-addTwo();
-
-function addThree ()  {
-    let button3 = 0;
-    button3 += 3;
-    score.textContent = button3;
-}
-
-addThree();
-
-buttonOne.addEventListener("click", addOne);
-buttonTwo.addEventListener("click", addTwo);
-buttonThree.addEventListener("click", addThree);
+// Click button in order to increment
+homeButton1.addEventListener("click", homeIncrementOne);
+homeButton2.addEventListener("click", homeIncrementTwo);
