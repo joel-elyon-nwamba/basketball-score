@@ -33,6 +33,32 @@ function homeIncrementTwo() {
     scoreboard1.textContent = homeScore2;
 }
 
-// Click button in order to increment
+function homeIncrementThree() {
+    homeScore3 += 3;
+    scoreboard1.textContent = homeScore3;
+}
+
+// Function for guest increment
+function guestIncrementOne() {
+    guestScore1 += 1;
+    scoreboard2.textContent = guestScore1;
+}
+
+function guestIncrementTwo() {
+    guestScore2 += 2;
+    scoreboard2.textContent = guestScore2;
+}
+
+function guestIncrementThree() {
+    guestScore3 += 3;
+    scoreboard2.textContent = guestScore3;
+}
+
+// Click button in order to increment for home
 homeButton1.addEventListener("click", homeIncrementOne);
 homeButton2.addEventListener("click", homeIncrementTwo);
+homeButton3.addEventListener("click", homeIncrementThree);
+// Click button in order to increment for guest
+guestButton1.addEventListener("click", guestIncrementOne);
+guestButton2.addEventListener("click", guestIncrementTwo);
+guestButton3.addEventListener("click", guestIncrementThree);
